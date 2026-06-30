@@ -4,7 +4,7 @@
 > to run end-to-end from a clean clone — this is a logbook, not a homework dump.
 
 <!-- Replace USER/REPO once pushed to GitHub so the badge goes live. -->
-[![verify](https://github.com/USER/REPO/actions/workflows/verify.yml/badge.svg)](https://github.com/USER/REPO/actions/workflows/verify.yml)
+[![verify](https://github.com/Roots26Hz/HLM/actions/workflows/verify.yml/badge.svg)](https://github.com/Roots26Hz/HLM/actions/workflows/verify.yml)
 ![python](https://img.shields.io/badge/python-3.12-blue)
 
 ## What this is
