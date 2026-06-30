@@ -1,0 +1,19 @@
+# Week $week_padded — $title
+
+> Source guide: `guides/$guide`
+> Solution notebook: [`$notebook`]($notebook) &nbsp;·&nbsp; Status tracked in the [root dashboard](../../README.md)
+
+## Concepts covered
+
+- _List the key concepts from this week's guide here, then tag them in `meta.yml`._
+
+## Run this week's notebook
+
+```bash
+uv run papermill weeks/week$week_padded/$notebook .verify_out/week$week_padded.ipynb -k python3
+```
+
+## Notes
+
+- Datasets: scikit-learn loaders (no downloads). Any CSVs live under `../../data/`.
+- Reuse shared helpers: `from ml_utils import load_wine_df, standardize, train_test_split_df`.

@@ -1,0 +1,25 @@
+[project]
+name = "ml-lab-logbook"
+version = "0.1.0"
+description = "A reproducibility-verified, self-indexing logbook of weekly ML labs (23CSE301)."
+readme = "README.md"
+requires-python = ">=3.12"
+dependencies = [
+    "numpy>=2.0",
+    "pandas>=2.2",
+    "scikit-learn>=1.5",
+    "jupyterlab>=4.2",
+    "ipykernel>=6.29",
+    "papermill>=2.6",
+    "pyyaml>=6.0",
+    "nbformat>=5.10",
+]
+
+# `shared/ml_utils` is installed as an importable package named `ml_utils`, so every
+# week's notebook can `from ml_utils import ...` instead of re-pasting boilerplate.
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[tool.hatch.build.targets.wheel]
+packages = ["shared/ml_utils"]

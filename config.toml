@@ -1,0 +1,12 @@
+# One-time settings for the whole logbook. Edit these once; the automation reads
+# them everywhere (notebook filenames, guide names, README header).
+
+[student]
+# Replace with your real Amrita roll number. Every week's grade-locked notebook
+# filename (lab1_<rollno>.ipynb, lab2_<rollno>.ipynb, ...) is derived from this.
+rollno = "CB.SC.U4CSE24664"
+name = "Rutav Desai"
+
+[course]
+code = "23CSE301"
+title = "Machine Learning Laboratory"

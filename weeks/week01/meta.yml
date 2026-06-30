@@ -1,0 +1,27 @@
+week: 1
+title: "NumPy & Pandas Foundations"
+guide: "23CSE301_ML_Week1_Guide.pdf"
+notebook: "lab1_CB.SC.U4CSE24664.ipynb"
+datasets: [load_iris, load_wine]
+topics:
+  - numpy-arrays
+  - reshaping
+  - indexing-slicing
+  - boolean-masking
+  - broadcasting
+  - aggregation
+  - stacking-splitting
+  - linear-algebra
+  - random-seeding
+  - sorting-searching
+  - pandas-series
+  - pandas-dataframe
+  - selecting-filtering
+  - missing-data
+  - feature-engineering
+  - groupby
+  - merging-concat
+  - encoding
+  - correlation
+  - train-test-split
+status: done
