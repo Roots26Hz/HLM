@@ -8,7 +8,7 @@ Not a folder-per-week homework dump — a **compounding, self-indexing engineeri
 that anyone can clone, install, and re-run to the exact same result.
 
 <!-- Replace USER/REPO once pushed to GitHub so the badges go live. -->
-[![CI](https://github.com/USER/REPO/actions/workflows/verify.yml/badge.svg)](https://github.com/USER/REPO/actions/workflows/verify.yml)
+[![CI](https://github.com/Roots26Hz/HLM/actions/workflows/verify.yml/badge.svg)](https://github.com/Roots26Hz/HLM/actions/workflows/verify.yml)
 &nbsp;
 ![Python](https://img.shields.io/badge/Python-3.12-3776AB?logo=python&logoColor=white)
 ![uv](https://img.shields.io/badge/env-uv-DE5FE9?logo=astral&logoColor=white)
