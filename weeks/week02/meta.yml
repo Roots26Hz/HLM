@@ -1,0 +1,23 @@
+week: 2
+title: "Data Cleaning & Feature Engineering"
+guide: "23CSE301_ML_Week2_Guide.pdf"
+notebook: "lab2_CB.SC.U4CSE24664.ipynb"
+datasets: [load_iris, load_wine]
+topics:
+  - data-diagnostics
+  - duplicates
+  - dtype-conversion
+  - missing-data
+  - imputation
+  - outlier-detection
+  - outlier-treatment
+  - text-cleaning
+  - feature-scaling
+  - sklearn-encoders
+  - binning
+  - datetime-features
+  - skew-transform
+  - interaction-features
+  - polynomial-features
+  - feature-selection
+status: done

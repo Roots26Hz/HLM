@@ -10,3 +10,5 @@ name = "Rutav Desai"
 [course]
 code = "23CSE301"
 title = "Machine Learning Laboratory"
+# Total planned weeks this semester — the progress bar fills against this.
+weeks_total = 13

@@ -30,25 +30,61 @@ Notebook: [`lab1_CB.SC.U4CSE24664.ipynb`](../weeks/week01/lab1_CB.SC.U4CSE24664.
 - `correlation`
 - `train-test-split`
 
+### Week 02 — Data Cleaning & Feature Engineering
+
+Notebook: [`lab2_CB.SC.U4CSE24664.ipynb`](../weeks/week02/lab2_CB.SC.U4CSE24664.ipynb)
+
+- `data-diagnostics`
+- `duplicates`
+- `dtype-conversion`
+- `missing-data`
+- `imputation`
+- `outlier-detection`
+- `outlier-treatment`
+- `text-cleaning`
+- `feature-scaling`
+- `sklearn-encoders`
+- `binning`
+- `datetime-features`
+- `skew-transform`
+- `interaction-features`
+- `polynomial-features`
+- `feature-selection`
+
 ## All concepts (A→Z)
 
 - `aggregation` — week01
+- `binning` — week02
 - `boolean-masking` — week01
 - `broadcasting` — week01
 - `correlation` — week01
+- `data-diagnostics` — week02
+- `datetime-features` — week02
+- `dtype-conversion` — week02
+- `duplicates` — week02
 - `encoding` — week01
 - `feature-engineering` — week01
+- `feature-scaling` — week02
+- `feature-selection` — week02
 - `groupby` — week01
+- `imputation` — week02
 - `indexing-slicing` — week01
+- `interaction-features` — week02
 - `linear-algebra` — week01
 - `merging-concat` — week01
-- `missing-data` — week01
+- `missing-data` — week01, week02
 - `numpy-arrays` — week01
+- `outlier-detection` — week02
+- `outlier-treatment` — week02
 - `pandas-dataframe` — week01
 - `pandas-series` — week01
+- `polynomial-features` — week02
 - `random-seeding` — week01
 - `reshaping` — week01
 - `selecting-filtering` — week01
+- `skew-transform` — week02
+- `sklearn-encoders` — week02
 - `sorting-searching` — week01
 - `stacking-splitting` — week01
+- `text-cleaning` — week02
 - `train-test-split` — week01

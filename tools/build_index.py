@@ -15,6 +15,7 @@ from __future__ import annotations
 
 import argparse
 import sys
+import tomllib
 from pathlib import Path
 
 import yaml
@@ -32,6 +33,16 @@ STATUS_LABEL = {
 }
 
 
+def semester_total(n_weeks: int) -> int:
+    """Planned weeks this semester (config `course.weeks_total`), else weeks present."""
+    try:
+        with (ROOT / "config.toml").open("rb") as fh:
+            total = tomllib.load(fh).get("course", {}).get("weeks_total")
+    except FileNotFoundError:
+        total = None
+    return max(int(total), n_weeks) if total else n_weeks
+
+
 def load_weeks() -> list[dict]:
     weeks = []
     for meta_path in sorted(ROOT.glob("weeks/*/meta.yml")):
@@ -45,17 +56,19 @@ def load_weeks() -> list[dict]:
     return weeks
 
 
-def progress_bar(done: int, total: int, width: int = 20) -> str:
-    if total == 0:
-        return "`[--------------------]` 0/0 weeks complete"
+def progress_bar(done: int, total: int, width: int = 24) -> str:
+    total = max(total, 1)
+    done = max(0, min(done, total))
     filled = round(width * done / total)
-    bar = "#" * filled + "-" * (width - filled)
-    return f"`[{bar}]` **{done}/{total}** weeks complete"
+    bar = "█" * filled + "░" * (width - filled)
+    pct = round(100 * done / total)
+    return f"`{bar}`&nbsp;&nbsp;**{pct}%** &nbsp;·&nbsp; {done} of {total} weeks complete"
 
 
 def render_dashboard(weeks: list[dict]) -> str:
     done = sum(1 for w in weeks if w["status"] == "done")
-    lines = ["### Progress", "", progress_bar(done, len(weeks)), "", "### Weeks", ""]
+    total = semester_total(len(weeks))
+    lines = ["### Progress", "", progress_bar(done, total), "", "### Weeks", ""]
     lines.append("| Week | Title | Datasets | Topics | Status | Notebook |")
     lines.append("|------|-------|----------|--------|--------|----------|")
     for w in weeks:
@@ -80,22 +93,10 @@ def topic_to_weeks(weeks: list[dict]) -> dict[str, list[dict]]:
     return dict(sorted(index.items()))
 
 
-def render_concept_index(weeks: list[dict]) -> str:
-    index = topic_to_weeks(weeks)
-    lines = ["### Concept index", ""]
-    if not index:
-        lines.append("_No concepts tagged yet. Add `topics:` to each week's `meta.yml`._")
-        return "\n".join(lines)
-    lines.append("Every concept, and the week(s) that cover it:")
-    lines.append("")
-    for topic, wks in index.items():
-        refs = ", ".join(f"[w{int(w['week']):02d}](weeks/{w['_dir']}/)" for w in wks)
-        lines.append(f"- **{topic}** — {refs}")
-    return "\n".join(lines)
-
-
 def render_auto_block(weeks: list[dict]) -> str:
-    return "\n\n".join([render_dashboard(weeks), render_concept_index(weeks)])
+    # Auto-managed README section: Progress + Weeks only.
+    # (The cross-week concept map still lives in shared/CHEATSHEET.md.)
+    return render_dashboard(weeks)
 
 
 def render_cheatsheet(weeks: list[dict]) -> str:

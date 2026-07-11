@@ -1,100 +1,135 @@
-# ML Lab Logbook — 23CSE301 Machine Learning
+<div align="center">
 
-> A reproducibility-verified logbook of my weekly ML labs. Every notebook is CI-proven
-> to run end-to-end from a clean clone — this is a logbook, not a homework dump.
+# 🧪 ML Lab Logbook
 
-<!-- Replace USER/REPO once pushed to GitHub so the badge goes live. -->
-[![verify](https://github.com/USER/REPO/actions/workflows/verify.yml/badge.svg)](https://github.com/USER/REPO/actions/workflows/verify.yml)
-![python](https://img.shields.io/badge/python-3.12-blue)
+### _A reproducibility-verified logbook of my weekly Machine Learning labs._
 
-## What this is
+Not a folder-per-week homework dump — a **compounding, self-indexing engineering artifact**
+that anyone can clone, install, and re-run to the exact same result.
 
-One repository that grows by one folder each week of the semester, but stays coherent:
+<!-- Replace USER/REPO once pushed to GitHub so the badges go live. -->
+[![CI](https://github.com/USER/REPO/actions/workflows/verify.yml/badge.svg)](https://github.com/USER/REPO/actions/workflows/verify.yml)
+&nbsp;
+![Python](https://img.shields.io/badge/Python-3.12-3776AB?logo=python&logoColor=white)
+![uv](https://img.shields.io/badge/env-uv-DE5FE9?logo=astral&logoColor=white)
+![Jupyter](https://img.shields.io/badge/notebooks-Jupyter-F37626?logo=jupyter&logoColor=white)
+![Reproducible](https://img.shields.io/badge/reproducible-%E2%9C%93-2EA043)
+![Course](https://img.shields.io/badge/23CSE301-Machine%20Learning-4C6EF5)
 
-- **Gradeable** — each week's notebook keeps the exact name the guide demands
-  (`lab1_<rollno>.ipynb`, `lab2_<rollno>.ipynb`, …).
-- **Reproducible** — pinned with `uv.lock`; CI executes every notebook from a clean clone.
-- **Self-indexing** — one tiny `meta.yml` per week auto-generates the dashboard, the
-  cross-week concept index, and the cumulative cheat sheet below.
-- **Additive** — adding week 12 is the same two-minute ritual as adding week 2.
+</div>
 
-## Quickstart
+---
+
+> **The idea in one line:** every notebook is CI-proven to run end-to-end from a clean clone,
+> and a single `meta.yml` per week regenerates the dashboard below — so the repo *grows itself*.
+
+## ✨ What makes this different
+
+|  | |
+|---|---|
+| 🔒 **Gradeable** | Every notebook keeps the exact name the guide demands — `lab1_<rollno>.ipynb`, `lab2_<rollno>.ipynb`, … — so it stays submittable as-is. |
+| 🔁 **Reproducible** | Environment pinned with `uv.lock`; CI executes *every* notebook headless on a fresh machine. A green badge = "it really runs." |
+| 🧭 **Self-indexing** | One tiny `meta.yml` per week is the single source of truth. It auto-builds the progress dashboard and cumulative cheat sheet. |
+| ♻️ **DRY** | Shared helpers in [`ml_utils`](shared/ml_utils/data.py) are imported, never copy-pasted — so week 12 reuses week 1. |
+| ➕ **Additive** | Adding a new week is the same ~2-minute ritual every time, whether it's week 2 or week 13. |
+
+## 🚀 Quickstart
 
 ```bash
 git clone <this-repo> && cd <this-repo>
-uv sync                       # install the exact locked environment
-uv run jupyter lab           # open and work on notebooks
-make verify                   # execute every notebook headless (reproducibility gate)
+uv sync                 # reproduce the exact locked environment
+uv run jupyter lab      # open and work on the notebooks
+make verify             # execute every notebook headless — the reproducibility gate
 ```
+
+<details>
+<summary><b>What each <code>make</code> target does</b></summary>
+
+| Command | What it does |
+|---------|--------------|
+| `make install` | Install / refresh the locked environment (`uv sync`) |
+| `make new-week N=2 TITLE="…"` | Scaffold a new week folder + auto-named grade-locked notebook |
+| `make verify` | Run every notebook top-to-bottom from a clean kernel; fail on any error |
+| `make index` | Regenerate the dashboard below + the cumulative cheat sheet |
+| `make check` | Assert the dashboard is in sync (used by CI) |
+
+</details>
+
+## 📊 Semester progress
 
 <!-- AUTO:START -->
 
 ### Progress
 
-`[####################]` **1/1** weeks complete
+`████░░░░░░░░░░░░░░░░░░░░`&nbsp;&nbsp;**15%** &nbsp;·&nbsp; 2 of 13 weeks complete
 
 ### Weeks
 
 | Week | Title | Datasets | Topics | Status | Notebook |
 |------|-------|----------|--------|--------|----------|
 | 01 | NumPy & Pandas Foundations | `load_iris`, `load_wine` | 20 topics | ✅ done | [`lab1_CB.SC.U4CSE24664.ipynb`](weeks/week01/lab1_CB.SC.U4CSE24664.ipynb) |
-
-### Concept index
-
-Every concept, and the week(s) that cover it:
-
-- **aggregation** — [w01](weeks/week01/)
-- **boolean-masking** — [w01](weeks/week01/)
-- **broadcasting** — [w01](weeks/week01/)
-- **correlation** — [w01](weeks/week01/)
-- **encoding** — [w01](weeks/week01/)
-- **feature-engineering** — [w01](weeks/week01/)
-- **groupby** — [w01](weeks/week01/)
-- **indexing-slicing** — [w01](weeks/week01/)
-- **linear-algebra** — [w01](weeks/week01/)
-- **merging-concat** — [w01](weeks/week01/)
-- **missing-data** — [w01](weeks/week01/)
-- **numpy-arrays** — [w01](weeks/week01/)
-- **pandas-dataframe** — [w01](weeks/week01/)
-- **pandas-series** — [w01](weeks/week01/)
-- **random-seeding** — [w01](weeks/week01/)
-- **reshaping** — [w01](weeks/week01/)
-- **selecting-filtering** — [w01](weeks/week01/)
-- **sorting-searching** — [w01](weeks/week01/)
-- **stacking-splitting** — [w01](weeks/week01/)
-- **train-test-split** — [w01](weeks/week01/)
+| 02 | Data Cleaning & Feature Engineering | `load_iris`, `load_wine` | 16 topics | ✅ done | [`lab2_CB.SC.U4CSE24664.ipynb`](weeks/week02/lab2_CB.SC.U4CSE24664.ipynb) |
 
 <!-- AUTO:END -->
 
-## Repository layout
+> _This section is generated by [`tools/build_index.py`](tools/build_index.py) from each week's
+> `meta.yml`. Don't edit between the markers by hand — run `make index`._
 
-```
-weeks/weekNN/        one folder per week (zero-padded): notebook + meta.yml + README + figures
-shared/ml_utils/     reusable helpers imported by every week (DRY engine)
-shared/CHEATSHEET.md auto-generated cumulative quick reference
-tools/               automation: new_week, build_index, verify_notebooks
-guides/              the source lab-guide PDFs, archived as received
-data/                room for CSV datasets in later weeks (sklearn needs none today)
-config.toml          one-time settings (roll number, course code)
-```
+## 🔁 The Monday ritual
 
-## Adding a new week (the Monday ritual)
+When a new guide arrives, the same loop turns it into a verified, indexed week:
 
-```bash
-# 1. drop the new guide PDF into guides/
-# 2. scaffold the week (auto-names the grade-locked notebook from config.toml)
-make new-week N=2 TITLE="Supervised Learning Basics"
-# 3. solve the exercises in weeks/week02/lab2_<rollno>.ipynb
-# 4. fill in topics/datasets/status in weeks/week02/meta.yml
-make verify     # 5. confirm it reproduces
-make index      # 6. regenerate the dashboard, concept index, and cheatsheet
-# 7. commit & push — CI re-verifies and keeps the badge green
+```mermaid
+flowchart LR
+    A["📄 Drop guide<br/>into guides/"] --> B["⚙️ make new-week<br/>N=2 TITLE=…"]
+    B --> C["🧑‍💻 Solve the<br/>notebook"]
+    C --> D["🏷️ Tag topics<br/>in meta.yml"]
+    D --> E["✅ make verify"]
+    E --> F["🔄 make index"]
+    F --> G["🚀 commit & push"]
+    G --> H(["🟢 CI stays green"])
 ```
 
-## Reproducibility
+Steps ⚙️🏷️✅🔄 are the only overhead — about two minutes. Everything that gives the repo its
+identity (dashboard, cheat sheet, reproducibility badge) maintains itself.
 
-- Environment pinned via `uv.lock` + `.python-version` (Python 3.12).
-- All datasets come from scikit-learn loaders (`load_iris`, `load_wine`) — no downloads.
-  CSV datasets in later weeks go under `data/` with documented provenance.
-- Random seeds are fixed in every notebook; `make verify` (and CI) prove each notebook
-  runs cleanly from a fresh kernel.
+## 🗂️ Repository layout
+
+```
+ml-lab-logbook/
+├── weeks/
+│   └── weekNN/                 # one folder per week, zero-padded (week01, week02, …)
+│       ├── labN_<rollno>.ipynb #   ← grade-locked notebook name (NOT padded)
+│       ├── meta.yml            #   ← single source of truth (title, topics, status)
+│       ├── README.md           #   per-week notes
+│       └── figures/            #   optional exported plots
+├── shared/
+│   ├── ml_utils/               # reusable helpers imported by every week (DRY engine)
+│   └── CHEATSHEET.md           # auto-generated cumulative quick reference
+├── tools/                      # the automation engine
+│   ├── new_week.py             #   scaffold a week
+│   ├── build_index.py          #   regenerate dashboard + cheat sheet
+│   └── verify_notebooks.py     #   execute notebooks headless (reproducibility gate)
+├── guides/                     # source lab-guide PDFs, archived as received
+├── data/                       # room for CSV datasets in later weeks (sklearn needs none)
+├── config.toml                 # one-time settings: roll number, course code, author
+└── .github/workflows/          # CI: verify every notebook on every push
+```
+
+## 🧬 Reproducibility guarantees
+
+- **Pinned everything** — `uv.lock` + `.python-version` (Python 3.12) lock exact versions.
+- **No hidden downloads** — datasets come from scikit-learn loaders (`load_iris`, `load_wine`);
+  any future CSVs live in [`data/`](data/README.md) with documented provenance.
+- **Fixed seeds** — every notebook seeds its RNG, so results are identical on every run.
+- **Proven, not promised** — `make verify` and CI execute each notebook from a fresh kernel;
+  the badge at the top is the receipt.
+
+---
+
+<div align="center">
+
+**23CSE301 — Machine Learning Laboratory** · B.Tech CSE
+Maintained by **Rutav Desai** · built to compound, one week at a time.
+
+</div>
