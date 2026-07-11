@@ -61,7 +61,7 @@ make verify             # execute every notebook headless — the reproducibilit
 
 ### Progress
 
-`████░░░░░░░░░░░░░░░░░░░░`&nbsp;&nbsp;**15%** &nbsp;·&nbsp; 2 of 13 weeks complete
+`██████░░░░░░░░░░░░░░░░░░`&nbsp;&nbsp;**23%** &nbsp;·&nbsp; 3 of 13 weeks complete
 
 ### Weeks
 
@@ -69,6 +69,7 @@ make verify             # execute every notebook headless — the reproducibilit
 |------|-------|----------|--------|--------|----------|
 | 01 | NumPy & Pandas Foundations | `load_iris`, `load_wine` | 20 topics | ✅ done | [`lab1_CB.SC.U4CSE24664.ipynb`](weeks/week01/lab1_CB.SC.U4CSE24664.ipynb) |
 | 02 | Data Cleaning & Feature Engineering | `load_iris`, `load_wine` | 16 topics | ✅ done | [`lab2_CB.SC.U4CSE24664.ipynb`](weeks/week02/lab2_CB.SC.U4CSE24664.ipynb) |
+| 03 | Data Visualisation: Matplotlib & Seaborn | `load_iris`, `load_wine` | 15 topics | ✅ done | [`lab3_CB.SC.U4CSE24664.ipynb`](weeks/week03/lab3_CB.SC.U4CSE24664.ipynb) |
 
 <!-- AUTO:END -->
 

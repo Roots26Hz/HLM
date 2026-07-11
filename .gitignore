@@ -15,6 +15,9 @@ dist/
 # Local scratch outputs from notebook verification
 .verify_out/
 
+# Figures re-created by savefig exercises on every run (regenerable, not source)
+weeks/*/figures/*.png
+
 # Agent/editor metadata
 .claude/
 

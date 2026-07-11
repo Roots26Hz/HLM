@@ -51,40 +51,75 @@ Notebook: [`lab2_CB.SC.U4CSE24664.ipynb`](../weeks/week02/lab2_CB.SC.U4CSE24664.
 - `polynomial-features`
 - `feature-selection`
 
+### Week 03 — Data Visualisation: Matplotlib & Seaborn
+
+Notebook: [`lab3_CB.SC.U4CSE24664.ipynb`](../weeks/week03/lab3_CB.SC.U4CSE24664.ipynb)
+
+- `matplotlib-oo-api`
+- `line-plots`
+- `scatter-plots`
+- `histograms`
+- `bar-charts`
+- `box-plots`
+- `subplots`
+- `seaborn-scatter`
+- `distribution-plots`
+- `violin-plots`
+- `pairplot`
+- `heatmap`
+- `countplot`
+- `facetgrid`
+- `exploratory-data-analysis`
+
 ## All concepts (A→Z)
 
 - `aggregation` — week01
+- `bar-charts` — week03
 - `binning` — week02
 - `boolean-masking` — week01
+- `box-plots` — week03
 - `broadcasting` — week01
 - `correlation` — week01
+- `countplot` — week03
 - `data-diagnostics` — week02
 - `datetime-features` — week02
+- `distribution-plots` — week03
 - `dtype-conversion` — week02
 - `duplicates` — week02
 - `encoding` — week01
+- `exploratory-data-analysis` — week03
+- `facetgrid` — week03
 - `feature-engineering` — week01
 - `feature-scaling` — week02
 - `feature-selection` — week02
 - `groupby` — week01
+- `heatmap` — week03
+- `histograms` — week03
 - `imputation` — week02
 - `indexing-slicing` — week01
 - `interaction-features` — week02
+- `line-plots` — week03
 - `linear-algebra` — week01
+- `matplotlib-oo-api` — week03
 - `merging-concat` — week01
 - `missing-data` — week01, week02
 - `numpy-arrays` — week01
 - `outlier-detection` — week02
 - `outlier-treatment` — week02
+- `pairplot` — week03
 - `pandas-dataframe` — week01
 - `pandas-series` — week01
 - `polynomial-features` — week02
 - `random-seeding` — week01
 - `reshaping` — week01
+- `scatter-plots` — week03
+- `seaborn-scatter` — week03
 - `selecting-filtering` — week01
 - `skew-transform` — week02
 - `sklearn-encoders` — week02
 - `sorting-searching` — week01
 - `stacking-splitting` — week01
+- `subplots` — week03
 - `text-cleaning` — week02
 - `train-test-split` — week01
+- `violin-plots` — week03

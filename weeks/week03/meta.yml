@@ -1,0 +1,22 @@
+week: 3
+title: "Data Visualisation: Matplotlib & Seaborn"
+guide: "23CSE301_ML_Week3_Guide.pdf"
+notebook: "lab3_CB.SC.U4CSE24664.ipynb"
+datasets: [load_iris, load_wine]
+topics:
+  - matplotlib-oo-api
+  - line-plots
+  - scatter-plots
+  - histograms
+  - bar-charts
+  - box-plots
+  - subplots
+  - seaborn-scatter
+  - distribution-plots
+  - violin-plots
+  - pairplot
+  - heatmap
+  - countplot
+  - facetgrid
+  - exploratory-data-analysis
+status: done
