@@ -89,6 +89,9 @@ def main() -> int:
 
     week_dir = ROOT / "weeks" / f"week{padded}"
     (week_dir / "figures").mkdir(parents=True, exist_ok=True)
+    # Track the (otherwise empty) figures/ dir so it exists on a fresh clone / CI,
+    # where savefig exercises write into it.
+    (week_dir / "figures" / ".gitkeep").touch()
 
     targets = {
         "meta.yml": render(
